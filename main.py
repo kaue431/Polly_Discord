@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import asyncio
+import os
 
 intents = discord.Intents.default()
 intents.message_content = True  # Habilitar leitura de mensagens
@@ -84,7 +85,7 @@ async def main():
         print(f"Erro ao carregar o módulo de cursos: {e}")
 
     # Substitua pelo token do seu bot
-    await bot.start("MTMyNDg1ODk4NDgxMjc3NzUyMw.GaLULj.HlC-rxWfFDKRqdCpKMwRcCiFeM_X5SnEvlXtNQ")
+    await bot.start(os.getenv("DISCORD_TOKEN"))
 
 if __name__ == "__main__":
     asyncio.run(main())
