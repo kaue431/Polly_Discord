@@ -3,3 +3,4 @@ yt-dlp
 cohere
 requests
 unidecode
+deep_translator
