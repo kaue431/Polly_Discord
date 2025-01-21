@@ -50,7 +50,7 @@ class Eventos(commands.Cog):
         agora = datetime.now()
         for evento in list(self.eventos):  # Copia da lista para evitar problemas ao remover
             if evento["data"].date() == agora.date():
-                canal = self.bot.get_channel(1204135960019730473/1324878097576624270)  # Substitua pelo ID do seu canal
+                canal = self.bot.get_channel(1204135960019730473/1331068164100067461)  # Substitua pelo ID do seu canal
                 if canal:
                     await canal.send(f":tada: Hoje é dia do evento **{evento['nome']}**!\nTema: **{evento['tema']}**\nMensagem: {evento['mensagem']}")
                 self.eventos.remove(evento)
